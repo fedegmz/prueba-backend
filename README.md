@@ -2,6 +2,18 @@
 
 Este documento proporciona una descripción detallada de los endpoints de la API para usuarios y comentarios. Cada endpoint incluye detalles sobre la URL completa, los parámetros requeridos y opcionales, y ejemplos de respuestas.
 
+## Instalación
+
+Este proyecto utiliza [Composer](https://getcomposer.org/) para manejar las dependencias de PHP. Debes tener Composer instalado en tu máquina para poder ejecutar este proyecto.
+
+Si aún no tienes Composer, puedes descargarlo desde su [sitio web oficial](https://getcomposer.org/download/).
+
+Una vez que tienes Composer instalado, abre una terminal en la raíz del proyecto y ejecuta el siguiente comando para instalar las dependencias del proyecto:
+
+```bash
+composer install
+```
+
 ## API Endpoints
 
 ### Usuarios
