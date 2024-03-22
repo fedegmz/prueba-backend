@@ -150,7 +150,7 @@ function updateUser(id) {
         formData = new FormData($form);
         formData.append("id", id);
        
-    fetch(`${URLUser}updateUser/${id}`, {
+    fetch(`${URLUser}updateUser`, {
         method: 'PUT',
         body: JSON.stringify(Object.fromEntries(formData)),
     })

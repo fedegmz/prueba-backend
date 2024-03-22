@@ -117,7 +117,7 @@ class User extends Database
                 echo json_encode(['message' => 'No se actualizó ningún registro. Verifique los datos ingresados.']);
                 return;
             }
-            echo json_encode(['message' => 'User Eliminado']);
+            echo json_encode(['message' => 'Usuario Actualizado correctamente.']);
         } catch (PDOException $e) {
             $this->errorCode(500);
             echo json_encode(['error' => 'Ocurrió un error al actualizar el usuario.' . $e->getMessage()]);
@@ -146,7 +146,7 @@ class User extends Database
 
             $pdo->commit();
 
-            echo json_encode(['message' => 'User Eliminado']);
+            echo json_encode(['message' => 'Usuario Eliminado']);
 
         } catch (\Exception $e) {
             $pdo->rollBack();

@@ -71,7 +71,7 @@
 
 <!-- fin modal  -->
     
-    <script src="./src/views/js/user.js?v=485967"></script>
-    <script src="./src/views/js/comment.js?v=85686"></script>
+    <script src="./src/views/js/user.js?v=8976"></script>
+    <script src="./src/views/js/comment.js?v=9878787"></script>
 </body>
 </html>

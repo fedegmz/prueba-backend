@@ -21,7 +21,7 @@ class Comments extends Database
     {
         try{
             $pdo = $this->Connect();
-            $stmt = $pdo->prepare('SELECT * FROM user_comment');
+            $stmt = $pdo->prepare('SELECT id, user, coment_text, likes FROM user_comment');
             $stmt->execute();
             $comments = $stmt->fetchAll(PDO::FETCH_ASSOC);
             echo json_encode($comments);
@@ -97,7 +97,7 @@ class Comments extends Database
 
             $stmt->execute();
 
-            echo json_encode(['message' => 'Comment created']);
+            echo json_encode(['message' => 'Comentario creado correctamente.']);
         } catch (PDOException $e) {
             $this->errorCode(500);
             echo json_encode(['error' => 'Ocurrió un error al crear el comentario.' . $e->getMessage()]);
@@ -136,10 +136,10 @@ class Comments extends Database
             $stmt->execute();
 
             if($stmt->rowCount() == 0){
-                echo json_encode(['message' => 'comment no encontrado']);
+                echo json_encode(['message' => 'comentario no encontrado']);
                 return;
             }
-            echo json_encode(['message' => 'comment actualizado correctamente.']);
+            echo json_encode(['message' => 'comentario actualizado correctamente.']);
         } catch (PDOException $e) {
             $this->errorCode(500);
             echo json_encode(['error' => 'Ocurrió un error al actualizar el comentario.' . $e->getMessage()]);
@@ -161,7 +161,7 @@ class Comments extends Database
             $stmt->bindParam(':id', $id, PDO::PARAM_INT);
             $stmt->execute();
 
-            echo json_encode(['message' => 'comment deleted']);
+            echo json_encode(['message' => 'comentario eliminado']);
         } catch (PDOException $e) {
             $this->errorCode(500);
             echo json_encode(['error' => 'Ocurrió un error al eliminar el comentario.' . $e->getMessage()]);
