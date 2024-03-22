@@ -3,18 +3,12 @@
     "autoload": {
         "psr-4": {
             "Fede\\Backend\\": "src/"
-        },
-        "classmap": [
-            "vendor/google/apiclient/src/Google"
-        ]
+        }
     },
     "authors": [
         {
             "name": "FedeDev",
             "email": "fededj-247@hotmail.com"
         }
-    ],
-    "require": {
-        "google/apiclient": "*"
-    }
+    ]
 }
